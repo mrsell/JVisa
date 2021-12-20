@@ -18,7 +18,7 @@
 /**
  * Modifications by Peter Froud, June 2018
  */
-package jvisa;
+package com.github.jvisa;
 
 /**
  * Exception for VISA operations.
@@ -26,6 +26,7 @@ package jvisa;
  * @author Günter Fuchs (gfuchs@acousticmicroscopy.com)
  * @author Peter Froud
  */
+@SuppressWarnings("serial")
 public class JVisaException extends Exception {
 
     public JVisaException() {

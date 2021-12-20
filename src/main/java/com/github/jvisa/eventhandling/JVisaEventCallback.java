@@ -1,4 +1,4 @@
-package jvisa.eventhandling;
+package com.github.jvisa.eventhandling;
 
 import com.sun.jna.Callback;
 import com.sun.jna.NativeLong;

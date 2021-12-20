@@ -18,17 +18,18 @@
 /**
  * Modifications by Peter Froud, June 2018
  */
-package jvisa;
+package com.github.jvisa;
 
-import jvisa.eventhandling.JVisaEventCallback;
+import java.nio.ByteBuffer;
+import java.nio.ShortBuffer;
+
+import com.github.jvisa.eventhandling.JVisaEventCallback;
 import com.sun.jna.Library;
 import com.sun.jna.NativeLong;
 import com.sun.jna.Pointer;
 import com.sun.jna.PointerType;
 import com.sun.jna.ptr.NativeLongByReference;
 import com.sun.jna.ptr.PointerByReference;
-import java.nio.ByteBuffer;
-import java.nio.ShortBuffer;
 
 /**
  * This interface glues this Java driver to the C++ VISA libraries, tkVisa64.dll and niVisa64.dll libraries for Windows, libreVisa library for Linux.

@@ -1,7 +1,8 @@
-package jvisa.eventhandling;
+package com.github.jvisa.eventhandling;
 
 import java.util.HashMap;
-import jvisa.JVisaLibrary;
+
+import com.github.jvisa.JVisaLibrary;
 
 /**
  *

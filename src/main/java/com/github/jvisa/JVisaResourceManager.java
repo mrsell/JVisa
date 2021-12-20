@@ -18,13 +18,13 @@
 /**
  * Modifications by Peter Froud, June 2018
  */
-package jvisa;
+package com.github.jvisa;
+
+import java.nio.ByteBuffer;
 
 import com.sun.jna.Native;
 import com.sun.jna.NativeLong;
 import com.sun.jna.ptr.NativeLongByReference;
-import java.nio.ByteBuffer;
-import static jvisa.JVisaUtils.stringToByteBuffer;
 
 /**
  * The Visa resource manager "scans the system to find all the devices connected to it through the various interface buses and then controls the access to them."
@@ -53,7 +53,6 @@ public class JVisaResourceManager {
      * @throws JVisaException if the resource manager couldn't be opened
      * @throws UnsatisfiedLinkError if the Visa DLL couldn't be loaded
      */
-    @SuppressWarnings("LeakingThisInConstructor")
     public JVisaResourceManager() throws JVisaException, UnsatisfiedLinkError {
         VISA_LIBRARY = (JVisaLibrary) Native.load("nivisa64.dll", JVisaLibrary.class);
 
@@ -143,7 +142,7 @@ public class JVisaResourceManager {
          Here, the question mark "matches any one character" which is not what it does in a regex.
          The star does the same thing as in a real regular expression.
          */
-        final ByteBuffer filterExpression = stringToByteBuffer("USB?*");
+        final ByteBuffer filterExpression = JVisaUtils.stringToByteBuffer("USB?*");
 
         final NativeLongByReference countPtr = new NativeLongByReference();
         final NativeLongByReference findListPtr = new NativeLongByReference();

@@ -18,14 +18,15 @@
 /**
  * Modifications by Peter Froud, June 2018
  */
-package jvisa;
+package com.github.jvisa;
 
+import java.nio.ByteBuffer;
+
+import com.github.jvisa.eventhandling.JVisaEventHandler;
+import com.github.jvisa.eventhandling.JVisaEventType;
 import com.sun.jna.Memory;
 import com.sun.jna.NativeLong;
 import com.sun.jna.ptr.NativeLongByReference;
-import java.nio.ByteBuffer;
-import jvisa.eventhandling.JVisaEventHandler;
-import jvisa.eventhandling.JVisaEventType;
 
 /**
  * Represents a Visa instrument. This is a wrapper around the native C instrument handle.
